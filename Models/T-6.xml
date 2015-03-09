@@ -1,0 +1,744 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>T-6.ac</path>
+<offsets>
+<pitch-deg>-4.75</pitch-deg>   
+<heading-deg>0</heading-deg>
+<roll-deg>0</roll-deg>
+<x-m>0</x-m>
+<y-m>0</y-m>
+<z-m>-0.13</z-m>
+</offsets>
+
+<!-- Livery -->
+
+<nasal>
+<load>
+var livery_update = aircraft.livery_update.new("Aircraft/T-6/Models/Liveries");
+</load>
+<unload>
+livery_update.stop();
+</unload>
+</nasal>
+
+<animation>
+<type>material</type>
+<object-name>hull</object-name>
+<object-name>arch</object-name>
+<object-name>tail</object-name>
+<object-name>rudder</object-name>
+<object-name>hstab</object-name>
+<object-name>elevator</object-name>
+<object-name>rwing</object-name>
+<object-name>lwing</object-name>
+<object-name>speedbrake</object-name>
+<object-name>riflap</object-name>
+<object-name>liflap</object-name>
+<object-name>rflap</object-name>
+<object-name>lflap</object-name>
+<object-name>raileron</object-name>
+<object-name>laileron</object-name>
+<object-name>rdoor</object-name>
+<object-name>ldoor</object-name>
+<object-name>rbodoor</object-name>
+<object-name>rbidoor</object-name>
+<object-name>lbodoor</object-name>
+<object-name>lbidoor</object-name>
+<object-name>antennas</object-name>
+<property-base>sim/model/livery</property-base>
+<texture-prop>texture</texture-prop>
+<texture>Aircraft/T-6/Models/Liveries/Livery.png</texture>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>propeller</object-name>
+<texture-prop>texture</texture-prop>
+<texture>Aircraft/T-6/Models/Liveries/Propeller.png</texture>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>pdisk</object-name>
+<object-name>prop</object-name>
+<texture-prop>texture</texture-prop>
+<texture>Aircraft/T-6/Models/Liveries/Disk.png</texture>
+</animation>
+
+<!-- Shaders -->
+
+<animation>
+<type>noshadow</type>
+<object-name>canopy</object-name>
+<object-name>pdisk</object-name>
+<object-name>prop</object-name>
+</animation>
+
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/T-6/Shaders/Glass.png</texture>
+<object-name>canopy</object-name>
+</animation>
+
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/T-6/Shaders/Chrome.png</texture>
+<object-name>exhaust</object-name>
+<object-name>spinner</object-name>
+<object-name>fwheel</object-name>
+<object-name>fgear</object-name>
+<object-name>fstrut</object-name>
+<object-name>furingu</object-name>
+<object-name>fhydro</object-name>
+<object-name>fdring</object-name>
+<object-name>fuscissor</object-name>
+<object-name>fdscissor</object-name>
+<object-name>rwheel</object-name>
+<object-name>rstrut</object-name>
+<object-name>ruring</object-name>
+<object-name>rdring</object-name>
+<object-name>ruscissor</object-name>
+<object-name>rdscissor</object-name>
+<object-name>rhydro</object-name>
+<object-name>lwheel</object-name>
+<object-name>lstrut</object-name>
+<object-name>luring</object-name>
+<object-name>ldring</object-name>
+<object-name>luscissor</object-name>
+<object-name>ldscissor</object-name>
+<object-name>lhydro</object-name>
+<object-name>box</object-name>
+<object-name>box2</object-name>
+</animation>
+
+<!-- Animations -->
+
+<animation>
+<type>rotate</type>
+<object-name>raileron</object-name>
+<property>surface-positions/left-aileron-pos-norm</property>
+<factor>-20</factor>
+<axis>   
+<x1-m> 0.34</x1-m>
+<y1-m> 4.99</y1-m>
+<z1-m> 0.71</z1-m>
+<x2-m> 0.52</x2-m>
+<y2-m> 2.81</y2-m>
+<z2-m> 0.42</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>laileron</object-name>
+<property>surface-positions/left-aileron-pos-norm</property>
+<factor>-20</factor>
+<axis>   
+<x1-m> 0.34</x1-m>
+<y1-m>-4.99</y1-m>
+<z1-m> 0.71</z1-m>
+<x2-m> 0.52</x2-m>
+<y2-m>-2.81</y2-m>
+<z2-m> 0.42</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rflap</object-name>
+<property>surface-positions/flap-pos-norm</property>
+<factor>-40</factor>
+<axis>   
+<x1-m> 0.54</x1-m>
+<y1-m> 2.81</y1-m>
+<z1-m> 0.36</z1-m>
+<x2-m> 0.67</x2-m>
+<y2-m> 0.39</y2-m>
+<z2-m> 0.05</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>lflap</object-name>
+<property>surface-positions/flap-pos-norm</property>
+<factor>40</factor>
+<axis>   
+<x1-m> 0.54</x1-m>
+<y1-m>-2.81</y1-m>
+<z1-m> 0.36</z1-m>
+<x2-m> 0.67</x2-m>
+<y2-m>-0.39</y2-m>
+<z2-m> 0.05</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rudder</object-name>
+<property>surface-positions/rudder-pos-norm</property>
+<factor>20</factor>
+<axis>   
+<x1-m> 4.68</x1-m>
+<y1-m> 0.00</y1-m>
+<z1-m> 2.44</z1-m>
+<x2-m> 4.68</x2-m>
+<y2-m> 0.00</y2-m>
+<z2-m> 0.90</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>elevator</object-name>
+<property>surface-positions/elevator-pos-norm</property>
+<factor>20</factor>
+<axis>   
+<x1-m> 5.47</x1-m>
+<y1-m>-1.83</y1-m>
+<z1-m> 0.74</z1-m>
+<x2-m> 5.47</x2-m>
+<y2-m> 1.83</y2-m>
+<z2-m> 0.74</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>speedbrake</object-name>
+<property>surface-positions/speedbrake-pos-norm</property>
+<factor>40.00</factor>
+<axis>
+<x1-m> 0.53</x1-m>
+<y1-m>-0.19</y1-m>
+<z1-m> 0.02</z1-m>
+<x2-m> 0.53</x2-m>
+<y2-m> 0.19</y2-m>
+<z2-m> 0.02</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>fwheel</object-name>
+<object-name>ftyre</object-name>
+<object-name>fgear</object-name>
+<object-name>fstrut</object-name>
+<object-name>furingu</object-name>
+<object-name>fhydro</object-name>
+<object-name>fdring</object-name>
+<object-name>fuscissor</object-name>
+<object-name>fdscissor</object-name>
+<condition>
+<greater-than>
+<property>gear/gear[0]/position-norm</property>
+<value>0</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>rwheel</object-name>
+<object-name>rtyre</object-name>
+<object-name>rstrut</object-name>
+<object-name>ruring</object-name>
+<object-name>rdring</object-name>
+<object-name>ruscissor</object-name>
+<object-name>rdscissor</object-name>
+<object-name>rhydro</object-name>
+<condition>
+<greater-than>
+<property>gear/gear[2]/position-norm</property>
+<value>0</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>lwheel</object-name>
+<object-name>ltyre</object-name>
+<object-name>lstrut</object-name>
+<object-name>luring</object-name>
+<object-name>ldring</object-name>
+<object-name>luscissor</object-name>
+<object-name>ldscissor</object-name>
+<object-name>lhydro</object-name>
+<condition>
+<greater-than>
+<property>gear/gear[1]/position-norm</property>
+<value>0</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>fwheel</object-name>
+<object-name>ftyre</object-name>
+<object-name>fgear</object-name>
+<object-name>fstrut</object-name>
+<object-name>furingu</object-name>
+<object-name>fhydro</object-name>
+<object-name>fdring</object-name>
+<object-name>fuscissor</object-name>
+<object-name>fdscissor</object-name>
+<property>gear/gear[0]/position-norm</property>
+<factor>100</factor>
+<offset-deg>-100</offset-deg>
+<axis>
+<x1-m>-2.33</x1-m>
+<y1-m>-0.05</y1-m>
+<z1-m> 0.48</z1-m>   
+<x2-m>-2.33</x2-m>
+<y2-m> 0.05</y2-m>
+<z2-m> 0.48</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>fhydro</object-name>
+<property>gear/gear[0]/position-norm</property>
+<factor>-45</factor>
+<offset-deg>45</offset-deg>
+<axis>   
+<x1-m>-2.30</x1-m>
+<y1-m> 0.10</y1-m>
+<z1-m>-0.06</z1-m>
+<x2-m>-2.30</x2-m>
+<y2-m>-0.10</y2-m>
+<z2-m>-0.06</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>fwheel</object-name>
+<object-name>ftyre</object-name>
+<object-name>fgear</object-name>
+<property>surface-positions/rudder-pos-norm</property>
+<factor>-20</factor>
+<center>
+<x-m>-2.41</x-m>
+<y-m> 0.00</y-m>
+<z-m>-0.31</z-m>
+</center>
+<axis>
+<x>0.0</x>
+<y>0.0</y>
+<z>1.0</z>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>fwheel</object-name>
+<object-name>ftyre</object-name>
+<property>fdm/jsbsim/gear/unit[1]/wheel-speed-fps</property>
+<factor>-48.0</factor>
+<axis>
+<x1-m>-2.44</x1-m>
+<y1-m>-0.04</y1-m>
+<z1-m>-0.59</z1-m>   
+<x2-m>-2.44</x2-m>
+<y2-m> 0.04</y2-m>
+<z2-m>-0.59</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rwheel</object-name>
+<object-name>rtyre</object-name>
+<object-name>rstrut</object-name>
+<object-name>ruring</object-name>
+<object-name>rdring</object-name>
+<object-name>ruscissor</object-name>
+<object-name>rdscissor</object-name>
+<object-name>rhydro</object-name>
+<property>gear/gear[2]/position-norm</property>
+<factor>91</factor>
+<offset-deg>-91</offset-deg>
+<axis>
+<x1-m> 0.00</x1-m>
+<y1-m> 1.19</y1-m>
+<z1-m> 0.21</z1-m>   
+<x2-m> 0.05</x2-m>
+<y2-m> 1.19</y2-m>
+<z2-m> 0.21</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>rwheel</object-name>
+<object-name>rtyre</object-name>
+<property>fdm/jsbsim/gear/unit[3]/wheel-speed-fps</property>
+<factor>48.0</factor>
+<axis>
+<x1-m> 0.01</x1-m>
+<y1-m>-1.29</y1-m>
+<z1-m>-0.53</z1-m>   
+<x2-m> 0.01</x2-m>
+<y2-m>-1.31</y2-m>
+<z2-m>-0.53</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rhydro</object-name>
+<property>gear/gear[2]/position-norm</property>
+<factor>-170</factor>
+<offset-deg>170</offset-deg>
+<axis>   
+<x1-m> 0.00</x1-m>
+<y1-m> 1.18</y1-m>
+<z1-m>-0.11</z1-m>
+<x2-m> 0.04</x2-m>
+<y2-m> 1.18</y2-m>
+<z2-m>-0.11</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>lwheel</object-name>
+<object-name>ltyre</object-name>
+<object-name>lstrut</object-name>
+<object-name>luring</object-name>
+<object-name>ldring</object-name>
+<object-name>luscissor</object-name>
+<object-name>ldscissor</object-name>
+<object-name>lhydro</object-name>
+<property>gear/gear[1]/position-norm</property>
+<factor>-91</factor>
+<offset-deg>91</offset-deg>
+<axis>
+<x1-m> 0.00</x1-m>
+<y1-m>-1.19</y1-m>
+<z1-m> 0.21</z1-m>   
+<x2-m> 0.05</x2-m>
+<y2-m>-1.19</y2-m>
+<z2-m> 0.21</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>lwheel</object-name>
+<object-name>ltyre</object-name>
+<property>fdm/jsbsim/gear/unit[2]/wheel-speed-fps</property>
+<factor>-48.0</factor>
+<axis>
+<x1-m> 0.01</x1-m>
+<y1-m> 1.29</y1-m>
+<z1-m>-0.53</z1-m>   
+<x2-m> 0.01</x2-m>
+<y2-m> 1.31</y2-m>
+<z2-m>-0.53</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>lhydro</object-name>
+<property>gear/gear[1]/position-norm</property>
+<factor>170</factor>
+<offset-deg>-170</offset-deg>
+<axis>   
+<x1-m> 0.00</x1-m>
+<y1-m>-1.18</y1-m>
+<z1-m>-0.11</z1-m>
+<x2-m> 0.04</x2-m>
+<y2-m>-1.18</y2-m>
+<z2-m>-0.11</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rdoor</object-name>
+<property>gear/gear[0]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>92</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>92</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m>-2.41</x1-m>
+<y1-m> 0.23</y1-m>
+<z1-m> 0.30</z1-m>
+<x2-m>-1.19</x2-m>
+<y2-m> 0.27</y2-m>
+<z2-m> 0.17</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>ldoor</object-name>
+<property>gear/gear[0]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-92</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>-92</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m>-2.41</x1-m>
+<y1-m>-0.23</y1-m>
+<z1-m> 0.30</z1-m>
+<x2-m>-1.19</x2-m>
+<y2-m>-0.27</y2-m>
+<z2-m> 0.17</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rbodoor</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>123</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>123</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m>-0.08</x1-m>
+<y1-m> 1.27</y1-m>
+<z1-m> 0.09</z1-m>
+<x2-m> 0.19</x2-m>
+<y2-m> 1.27</y2-m>
+<z2-m> 0.10</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>lbodoor</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-123</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>-123</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m>-0.08</x1-m>
+<y1-m>-1.27</y1-m>
+<z1-m> 0.09</z1-m>
+<x2-m> 0.19</x2-m>
+<y2-m>-1.27</y2-m>
+<z2-m> 0.10</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rbidoor</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.4</ind>
+<dep>-88</dep>
+</entry>
+<entry>
+<ind>0.7</ind>
+<dep>-88</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m> 0.04</x1-m>
+<y1-m> 0.03</y1-m>
+<z1-m> 0.01</z1-m>
+<x2-m> 0.31</x2-m>
+<y2-m> 0.03</y2-m>
+<z2-m> 0.02</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>lbidoor</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.4</ind>
+<dep>88</dep>
+</entry>
+<entry>
+<ind>0.7</ind>
+<dep>88</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m> 0.04</x1-m>
+<y1-m>-0.03</y1-m>
+<z1-m> 0.01</z1-m>
+<x2-m> 0.31</x2-m>
+<y2-m>-0.03</y2-m>
+<z2-m> 0.02</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>canopy</object-name>
+<object-name>arch</object-name>
+<property>canopy/position-norm</property>
+<factor>-80.00</factor>
+<axis>
+<x1-m> -1.17</x1-m>
+<y1-m>  0.44</y1-m>
+<z1-m>  1.11</z1-m>
+<x2-m>  1.24</x2-m>
+<y2-m>  0.44</y2-m>
+<z2-m>  1.26</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>propeller</object-name>
+<condition>
+<less-than>
+<property>engines/engine[0]/n2</property>
+<value>50.0001</value>
+</less-than>
+</condition>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>propeller</object-name>
+<property>engines/engine[0]/n2</property>
+<factor>3</factor>
+<center>
+<x-m>-3.65</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.95</z-m>
+</center>
+<axis>
+<x>1.0</x>
+<y>0.0</y>
+<z>0.0</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>prop</object-name>
+<condition>
+<greater-than>
+<property>engines/engine[0]/n2</property>
+<value>50.000</value>
+</greater-than>
+<less-than>
+<property>engines/engine[0]/n2</property>
+<value>70.0001</value>
+</less-than>
+</condition>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>prop</object-name>
+<property>engines/engine[0]/n2</property>
+<center>
+<x-m>-3.65</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.95</z-m>
+</center>
+<axis>
+<x>1.0</x>
+<y>0.0</y>
+<z>0.0</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>pdisk</object-name>
+<condition>
+<greater-than>
+<property>engines/engine[0]/n2</property>
+<value>70.0000</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>pdisk</object-name>
+<property>engines/engine[0]/n2</property>
+<factor>.5</factor>   
+<center>
+<x-m>-3.65</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.95</z-m>
+</center>
+<axis>
+<x>1.0</x>
+<y>0.0</y>
+<z>0.0</z>
+</axis>
+</animation>
+
+</PropertyList>
